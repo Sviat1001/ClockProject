@@ -41,7 +41,7 @@ body{
 .clock .number9 { --rotation:270deg;}
 .clock .number10 { --rotation:300deg;}
 .clock .number11 { --rotation:330deg;}
-.clock .arrow{
+.clock .hand{
     --rotation: 0;
     position:absolute;
     bottom: 50%;
@@ -50,19 +50,20 @@ body{
     border-top-right-radius:10px;
     background-color: black;
     z-index:10;
-    transform:translateX(-50%) rotate(calc(var(--rotation)*1deg));
+    transform:translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+    transform-origin: bottom;
 }
-.clock .arrow.second {
+.clock .hand.second {
     width: 3px;
     height: 45%;
     background-color: red;
 }
-.clock .arrow.minute {
+.clock .hand.minute {
     width: 7px;
     height: 40%;
     background-color: black;
 }
-.clock .arrow.hour {
+.clock .hand.hour {
     width: 10px;
     height: 35%;
     background-color: black;
